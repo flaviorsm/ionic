@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Cadastrar testes
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page2" style="background-color:#E1F1F1;">
+  <form id="cadastrarTestes-form6">
+    <h5 id="cadastrarTestes-heading3" style="color:#000000;">
+      Anatomia
+    </h5>
+    <ion-item id="cadastrarTestes-select3">
+      <ion-label></ion-label>
+      <ion-select name="cbAnatomia">
+        <ion-option>
+          Selecione
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <div class="spacer" style="width:300px;height:20px;" id="cadastrarTestes-spacer6"></div>
+    <h5 id="cadastrarTestes-heading2" style="color:#000000;">
+      Nome do teste
+    </h5>
+    <ion-item id="cadastrarTestes-input3">
+      <ion-label></ion-label>
+      <ion-input type="text" placeholder="" name="txNome"></ion-input>
+    </ion-item>
+    <div class="spacer" style="width:300px;height:20px;" id="cadastrarTestes-spacer7"></div>
+    <h5 id="cadastrarTestes-heading4" style="color:#000000;">
+      Descrição do teste
+    </h5>
+    <ion-item id="cadastrarTestes-textarea1" class=".estilotextarea {height:80px;border: 1px dotted #000099;}">
+      <ion-label></ion-label>
+      <ion-textarea placeholder=""></ion-textarea>
+    </ion-item>
+  </form>
+  <button id="cadastrarTestes-button4" ion-button color="positive" block style="border-radius:5px 5px 5px 5px;">
+    SALVAR
+  </button>
+  <button id="cadastrarTestes-button3" ion-button color="assertive" block style="border-radius:5px 5px 5px 5px;" on-click="goToListarTestes()">
+    CANCELAR
+  </button>
+</ion-content>
