@@ -3,8 +3,8 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { FisioterapiaAplicadaPage } from '../pages/fisioterapia-aplicada/fisioterapia-aplicada';
 import { DatabaseProvider } from '../providers/database/database';
+import { HomePage } from '../pages/home/home';
 
 @Component({
   templateUrl: 'app.html'
@@ -30,7 +30,7 @@ export class MyApp {
 
   private openPage(splashScreen: SplashScreen){
     splashScreen.hide();
-    this.rootPage = FisioterapiaAplicadaPage;
+    this.rootPage = HomePage;
   }
   
 }

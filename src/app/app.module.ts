@@ -13,13 +13,15 @@ import { SQLite } from '@ionic-native/sqlite'
 import { DatabaseProvider } from '../providers/database/database';
 import { TesteOrtopedicoProvider } from '../providers/teste-ortopedico/teste-ortopedico';
 import { AnatomiaProvider } from '../providers/anatomia/anatomia';
+import { HomePage } from '../pages/home/home';
 
 @NgModule({
   declarations: [
     MyApp,
     ListarTestesPage,
     CadastrarTestesPage,
-    FisioterapiaAplicadaPage
+    FisioterapiaAplicadaPage,
+    HomePage
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,7 @@ import { AnatomiaProvider } from '../providers/anatomia/anatomia';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    HomePage,
     ListarTestesPage,
     CadastrarTestesPage,
     FisioterapiaAplicadaPage

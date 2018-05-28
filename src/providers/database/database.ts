@@ -26,7 +26,7 @@ export class DatabaseProvider {
         this.createTables(db);
         this.insertDefaultAnatomy(db);
       })
-      .catch(e => console.error(e));
+      .catch((e) => console.error(e));
   }
 
   private createTables(db: SQLiteObject){
