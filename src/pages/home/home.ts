@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { TesteListPage } from '../teste-list/teste-list';
 
 @Component({
   selector: 'page-home',
@@ -11,4 +12,8 @@ export class HomePage {
 
   }
 
+  listarTeste() {
+    this.navCtrl.push(TesteListPage);
+  }
+  
 }

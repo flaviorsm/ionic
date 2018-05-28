@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{ title }}</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding>
+  <form [formGroup]="form">
+    <ion-item>
+      <ion-label floating>Anatomia</ion-label>
+      <ion-select name="anatomia_id" [(ngModel)]="anatomia_id">
+        <ion-option *ngFor="let anatomia of anatomias" value="{{ anatomia.id }}">{{ anatomia.nome }}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input type="text" formControlName="nome"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!form.controls.nome.valid && (form.controls.nome.dirty || form.controls.nome.touched)" color="danger">
+      <div [hidden]="!form.controls.nome.errors.required">
+        O campo é obrigatório
+      </div>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label stacked>Procedimento</ion-label>
+      <ion-input type="text" formControlName="procedimento"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!form.controls.procedimento.valid && (form.controls.procedimento.dirty || form.controls.procedimento.touched)" color="danger">
+      <div [hidden]="!form.controls.procedimento.errors.required">
+        O campo é obrigatório
+      </div>
+    </ion-item>
+ 
+    <div padding>
+      <button ion-button block type="submit" [disabled]="!form.valid" (click)="onSubmit()">Salvar</button>
+    </div>
+  </form>
+</ion-content>
