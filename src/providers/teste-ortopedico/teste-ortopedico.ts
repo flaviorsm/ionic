@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 
 export interface testeOrtopedico {
-  key: string;
+  key?: string;
   nome: string;
   procedimento: string;
   ativo: boolean;

@@ -8,13 +8,15 @@ $ npm install -g ionic@latest
 $ ionic start meuProjeto blank
 $ cd ./meuProjeto
 $ npm install angularfire2 firebase --save
+$ npm install rxjs@6 rxjs-compat@6 --save.
+    --Depois import 'rxjs/add/operator/map';
 
 $ ionic g provider testeOrtopedico
-$ ionic g page teste-list
-$ ionic g page teste-edit
+$ ionic g page AddTeste
+$ ionic g page EditTeste
+$ ionic g page anatomia
 
 $ ionic g provider anatomia
-$ ionic g page anatomia
 
 $ ionic serve
 

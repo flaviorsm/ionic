@@ -3,11 +3,24 @@
     <ion-title>
       Ionic Blank
     </ion-title>
+    <ion-buttons end>
+      <button (click)="addTestePage()" ion-button>
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    <button ion-fab color="primary" (click)="listarTeste()">
-        <ion-icon name="add"></ion-icon>
-      </button>
+    <ion-list>
+        <ion-list-header>
+          Testes
+        </ion-list-header>
+     
+        <button ion-item *ngFor="let teste of listaTeste | async" (click)="editTestePage(teste)">
+            <h2>{{teste.nome}}</h2>
+            <p>{{teste.procedimento}}</p>
+          </button>  
+      </ion-list>
+      
 </ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ modal?.nome }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Nome</ion-label>
+    <ion-input [(ngModel)]="modal.nome" placeholder="Nome do teste"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Procedimento</ion-label>
+    <ion-textarea [(ngModel)]="modal.procedimento" placeholder="Descreva o procedimento"></ion-textarea>
+  </ion-item>
+
+  <button ion-button block clear (click)="updateTeste(modal)">Atualizar</button>
+  <button ion-button block clear (click)="removeTeste(modal)">Deletar</button>
+
+</ion-content>

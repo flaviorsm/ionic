@@ -6,11 +6,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+
 //Firebase
 import { AngularFireModule } from "angularfire2";
 import { TesteOrtopedicoProvider } from '../providers/teste-ortopedico/teste-ortopedico';
-import { TesteListPage } from '../pages/teste-list/teste-list';
-import { TesteEditPage } from '../pages/teste-edit/teste-edit';
+import { AddTestePage } from '../pages/add-teste/add-teste';
+import { EditTestePage } from '../pages/edit-teste/edit-teste';
 import { AnatomiaProvider } from '../providers/anatomia/anatomia';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
@@ -27,8 +28,8 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     HomePage,
-    TesteListPage,
-    TesteEditPage
+    AddTestePage,
+    EditTestePage
   ],
   imports: [
     BrowserModule,
@@ -40,8 +41,8 @@ export const firebaseConfig = {
   entryComponents: [
     MyApp,
     HomePage,
-    TesteListPage,
-    TesteEditPage
+    AddTestePage,
+    EditTestePage
   ],
   providers: [
     StatusBar,
