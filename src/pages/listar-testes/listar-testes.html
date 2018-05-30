@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar hideBackButton class="header">
+    <ion-title>
+      <h6>Testes Ortopédicos</h6>
+    </ion-title>
+    <ion-buttons left>
+        <button ion-button (click)="backHome()">
+          <ion-icon name="ios-arrow-back"></ion-icon>
+        </button>
+      </ion-buttons>
+    <ion-buttons end>
+      <button ion-button (click)="addTeste()">
+          <ion-icon name="md-add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar (ionInput)="filtrarTeste($event)" [(ngModel)]="searchText" placeholder="Nome do teste"></ion-searchbar>    
+  <ion-list>    
+    <ion-list-header *ngIf="testes.length > 0">Total: {{ testes.length }}</ion-list-header>
+    <ion-item-sliding *ngFor="let item of testes">      
+      <button ion-item (click)="editarTeste(item.id)">
+        <h2>{{ item.anatomia_nome }}</h2>
+        <h3><b>Testes:</b> {{ item.nome }}</h3>
+        <p class="destaque">Procedimento:</p>
+        <p>{{ item.descricao }}</p>        
+      </button>
+      <ion-item-options side="left">
+        <button ion-button color="danger" (click)="removerTeste(item)">
+          <ion-icon name="trash"></ion-icon>
+          Excluir
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>    
+    <ion-item>
+        <ion-label color="secondary">{{ onlyInactive ? 'Listar Ativos' : 'Listar Inativos' }}</ion-label>
+        <ion-toggle checked="true" [(ngModel)]="onlyInactive" (ionChange)="obterTestes()"></ion-toggle>
+      </ion-item>
+  </ion-toolbar>
+</ion-footer>

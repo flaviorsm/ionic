@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar hideBackButton class="header">
+      <ion-title>
+          <h6>Cadastrar testes</h6>
+      </ion-title>
+      <ion-buttons left>
+        <button ion-button (click)="backLista()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+        </button>
+      </ion-buttons>     
+      <ion-buttons end>
+          <button ion-button>
+              <ion-icon name="md-settings"></ion-icon>
+          </button>
+        </ion-buttons> 
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Anatomia</ion-label>
+      <ion-select name="anatomia_id" [(ngModel)]="model.anatomia_id">
+          <ion-option *ngFor="let anatomia of anatomias" value="{{ anatomia.id }}">{{ anatomia.nome }}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Nome do teste</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="model.nome"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Descrição</ion-label>
+      <ion-textarea elastic name="descricao" [(ngModel)]="model.descricao"></ion-textarea>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label fixed>Ativo</ion-label>
+      <ion-checkbox name="ativo" [(ngModel)]="model.ativo"></ion-checkbox>
+    </ion-item>  
+  </ion-list>
+
+  <button ion-button block (click)="save()">Salvar</button>
+</ion-content>
