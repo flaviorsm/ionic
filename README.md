@@ -4,54 +4,61 @@ Aplicativo com CRUD básico offline e online
 
 ## Configuração e inicialização
 
-### NodeJs 
+### NodeJs
 https://nodejs.org/en/
 
 ### Ionic Cordova 
-$ npm install -g cordova ionic@latest 
-$ npm install -g cordova
+
+$ npm install -g cordova ionic@latest  
+$ npm install -g cordova  
 
 ### Iniciar projeto
-$ ionic start <nomeProjeto> <modelo> 
-$ cd ./meuProjeto 
+$ ionic start *nomeProjeto* *modelo*  
+$ cd ./meuProjeto  
 
 ### Firebase
-$ npm install angularfire2 firebase --save 
-$ npm install rxjs@6 rxjs-compat@6 --save.
+
+#### Online
+$ npm install angularfire2 firebase    
+$ npm install rxjs@6 rxjs-compat@6  
+
+#### Offline
+$ npm install angularfire2-offline angularfire2 firebase  
+$ npm install firebase-admin  
 
 ### SQLite
-$ ionic cordova plugin add cordova-sqlite-storage
-$ npm install --save @ionic-native/sqlite
+$ ionic cordova plugin add cordova-sqlite-storage  
+$ npm install --save @ionic-native/sqlite  
 
 ## Desenvolvimento
 
 ### Comandos 'generate' utilizados 
-$ ionic g provider <nome-provider> 
-$ ionic g page <nome-pagina> 
+$ ionic g provider *nome-provider*   
+$ ionic g page *nome-pagina*  
 
 ### Comandos úteis
-https://ionicframework.com/docs/cli/generate/
-   
+https://ionicframework.com/docs/cli/generate/  
+ 
 ## Executar aplicativo
 
 ### Gerar SDK - desenvolvimento
-$ ionic cordova platform add <platform>  
-$ ionic cordova build <platform>
+$ ionic cordova platform add *platform*  
+$ ionic cordova build *platform*  
 
 ### No celular
-$ ionic run <platform>
+$ ionic run *platform*  
 
 ### No browser
-$ ionic serve --lab  
+$ ionic serve --lab    
 
 ## Informações
 
-### Modelo 'start'
+### Modelo **start**  
 * [blank] - vazio
 * [tabs] - menu no rodapé
 * [sidemenu] - menu lateral
 
-### Tipos 'platform'
+### Tipos **platform**
 * [Android]
 * [IOS]
 * [Windows]
