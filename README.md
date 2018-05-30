@@ -12,9 +12,12 @@ $ npm install -g cordova
 $ ionic start <nomeProjeto> <modelo> 
 $ cd ./meuProjeto 
 
-#Comandos úteis 
+#Comandos generate utilizados 
 $ ionic g provider <nome-provider> 
 $ ionic g page <nome-pagina> 
+
+#Comandos úteis
+https://ionicframework.com/docs/cli/generate/
    
 #Firebase
 $ npm install angularfire2 firebase --save 
